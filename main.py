@@ -50,6 +50,7 @@ def processar_diretorio(diretorio_entrada, diretorio_saida):
         else:
             print(f"Arquivo ignorado (não é imagem): {nome_arquivo}")
 
-diretorio_entrada = r"C:\Users\joao.machado\Desktop\image_resizer\imagens"
-diretorio_saida = r"C:\Users\joao.machado\Desktop\image_resizer\imagens_editadas"
+diretorio_base = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'image_resizer')
+diretorio_entrada = os.path.join(diretorio_base, 'imagens')
+diretorio_saida = os.path.join(diretorio_base, 'imagens_editadas')
 processar_diretorio(diretorio_entrada, diretorio_saida)
